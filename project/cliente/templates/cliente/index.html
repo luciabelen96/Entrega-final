@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}                                               
+    Mi primera página | INICIO  
+{% endblock title %}
+    
+
+{% block content %}
+    
+    <h2>INICIO</h2>
+
+    <button><a href="{% url 'admin:index' %}">Administración</a></button>
+    <button><a href="{% url 'profesor-list' %}">Ver profesores</a></button>
+    <button><a href="{% url 'profesor-create' %}">Guardar profesores</a></button>
+    <button><a href="{% url 'agregar-estudiante' %}">Ver estudiantes</a></button>
+    <button><a href="{% url 'ver-estudiante' %}">Guardar estudiantes</a></button>
+ 
+    {% endblock content %}

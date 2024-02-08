@@ -1,0 +1,13 @@
+<!-- En tu agregar_estudiante.html -->
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h2>Agregar Estudiante</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form}}
+        <button type="submit">Agregar Estudiante</button>
+    </form>
+{% endblock %}
+
+
