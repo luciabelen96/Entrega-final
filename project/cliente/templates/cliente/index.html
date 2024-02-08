@@ -1,18 +1,17 @@
 {% extends 'core/base.html' %}
 
-{% block title %}                                               
-    Mi primera página | INICIO  
+{% block title %}
+    Data de Estudiantes | Inicio
 {% endblock title %}
-    
 
 {% block content %}
-    
-    <h2>INICIO</h2>
 
-    <button><a href="{% url 'admin:index' %}">Administración</a></button>
-    <button><a href="{% url 'profesor-list' %}">Ver profesores</a></button>
-    <button><a href="{% url 'profesor-create' %}">Guardar profesores</a></button>
-    <button><a href="{% url 'agregar-estudiante' %}">Ver estudiantes</a></button>
-    <button><a href="{% url 'ver-estudiante' %}">Guardar estudiantes</a></button>
- 
-    {% endblock content %}
+    <div>
+        <button><a href="{% url 'cliente:agregar-estudiante' %}">Incorporar estudiante</a></button>
+        <button><a href="{% url 'cliente:ver-estudiante' %}">Lista de estudiantes</a></button>
+    </div>
+    <div>
+        <button><a href="{% url 'core:index' %}">Inicio</a></button>    
+    </div>
+    
+{% endblock content %}
