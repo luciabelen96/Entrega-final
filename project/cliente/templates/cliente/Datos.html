@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Ver Base de Datos
+{% endblock title %}
+    
+{% block content %}
+    <div class="container">
+        <h1 class="mt-4">Datos de la Base de Datos</h1>
+
+        <h2>Profesores</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <!-- Agrega más columnas según la estructura de tu modelo Profesor -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for profesor in profesores %}
+                    <tr>
+                        <td>{{ profesor.id }}</td>
+                        <td>{{ profesor.nombre }}</td>
+                        <td>{{ profesor.apellido }}</td>
+                        <!-- Ajusta las variables según la estructura de tu modelo Profesor -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Estudiantes</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <!-- Agrega más columnas según la estructura de tu modelo Estudiante -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for estudiante in Estudiantes %}
+                    <tr>
+                        <td>{{ estudiante.id }}</td>
+                        <td>{{ estudiante.nombre }}</td>
+                        <td>{{ estudiante.apellido }}</td>
+                        <td>{{ estudiante.email }}</td>
+                        <!-- Ajusta las variables según la estructura de tu modelo Estudiante -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

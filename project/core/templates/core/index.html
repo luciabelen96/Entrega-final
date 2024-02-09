@@ -24,7 +24,7 @@
                     <h2 class="card-title">Profesores</h2>
                     <p class="card-text">Listado de profesores</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm"  href="#!">Ver</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm"  href="{% url 'cliente:profesor-list' %}">Ver</a></div>
             </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -33,17 +33,26 @@
                     <h2 class="card-title">Ingresar profesores</h2>
                     <p class="card-text">Cargar información de profesores</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Ver</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'cliente:profesor-create' %}">Agregar</a></div>
             </div>
         </div>
         <div class="col-md-4 mb-5">
             <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="card-title">Card Three</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    <h2 class="card-title">Estudiantes</h2>
+                    <p class="card-text">Listado de estudiantes</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'cliente:ver-estudiante' %}">Ver</a></div>
             </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Agregar estudiantes</h2>
+                <p class="card-text">Cargar información de los estudiantes al sistema</p>
+            </div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'cliente:agregar-estudiante' %}">Agregar</a></div>
         </div>
     </div>
 
